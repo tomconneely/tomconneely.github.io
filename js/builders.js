@@ -1,22 +1,28 @@
-function BookBuilder() {
-    var newBook, self = this;.
-
-    function title(t) {
-        newBook.title = t;
-        return self;
-    }
-
-    function author(a) {
-        newBook.author = a;
-        return self;
-    }
-
-    function build() {
-        return newBook;
+var BookBuilder = (function(){
+    function BookBuilder() {
+      var self = this;
+      this.newBook = {};
+      
+      //function title(t) {
+      //  this.newBook.title = t;
+      //  return self;
+      //}
+      
+      function build() {
+        return this.newBook;
+      }
+      
+      //this.title = title;
+      this.build = build;
     }
     
-    this.build = build;
-}
+    BookBuilder.prototype.title = function (t) {
+      this.newBook.title = t;
+      return this;
+    }
+    
+    return BookBuilder;
+  }());
 
 function QuoteBuilder() {
     var newQuote, self = this;
