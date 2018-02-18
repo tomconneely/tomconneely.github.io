@@ -135,6 +135,18 @@ books.push({
 });
 
 books.push({
+    title: "The King of Big Air",
+    author: "Joseph Babcock",
+    isbn: "9781489031747",
+    year_read: 2018,
+    book_type: BOOK_TYPE.PHYSICAL,
+    goodreads_link: "https://www.goodreads.com/book/show/18192829-the-king-of-big-air",
+    amazon_link: "",
+    passages : [
+    ]
+});
+
+books.push({
     title: "",
     author: "",
     isbn: "",
