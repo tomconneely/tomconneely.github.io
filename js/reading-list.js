@@ -109,3 +109,39 @@ books.push({
     passages : [
     ]
 });
+
+books.push({
+    title: "10% Happier: How I Tamed the Voice in My Head, Reduced Stress Without Losing My Edge, and Found Self-Help That Actually Works",
+    author: "Dan Harris",
+    isbn: "9781444799040",
+    year_read: 2018,
+    book_type: BOOK_TYPE.PHYSICAL,
+    goodreads_link: "https://www.goodreads.com/book/show/24783767-10-happier",
+    amazon_link: "https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431/",
+    passages : [
+    ]
+});
+
+books.push({
+    title: "World Without Mind: The Existential Threat of Big Tech",
+    author: "Franklin Foer",
+    isbn: "9781787330283",
+    year_read: 2018,
+    book_type: BOOK_TYPE.PHYSICAL,
+    goodreads_link: "https://www.goodreads.com/book/show/34311003-world-without-mind",
+    amazon_link: "https://www.amazon.com/gp/product/1787330281/",
+    passages : [
+    ]
+});
+
+books.push({
+    title: "",
+    author: "",
+    isbn: "",
+    year_read: 2018,
+    book_type: BOOK_TYPE.PHYSICAL,
+    goodreads_link: "",
+    amazon_link: "",
+    passages : [
+    ]
+});
