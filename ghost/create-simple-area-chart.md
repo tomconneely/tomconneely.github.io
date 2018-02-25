@@ -1,5 +1,3 @@
-#Learning D3.js - Create a Simple Area Chart
-
 <style type="text/css">
     .area {
         fill: lightsteelblue;
@@ -9,6 +7,8 @@
         height: 300px;
     }
 </style>
+
+#Learning D3.js - Create a Simple Area Chart
 
 I've recently had to do some work using D3.js. I've found it a very interesting library and I've seen some really impressive examples of other people's work. My stuff has been very rudimentary so far. 
 
