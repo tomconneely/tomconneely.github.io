@@ -147,6 +147,18 @@ books.push({
 });
 
 books.push({
+    title: "MLK on \"The Other America\" and \"Black Power\"",
+    author: "Martin Luthor King Jr.",
+    isbn: "",
+    year_read: 2018,
+    book_type: BOOK_TYPE.EBOOK,
+    goodreads_link: "https://www.goodreads.com/book/show/33858733-mlk-on-the-other-america-and-black-power",
+    amazon_link: "",
+    passages : [
+    ]
+});
+
+books.push({
     title: "",
     author: "",
     isbn: "",
