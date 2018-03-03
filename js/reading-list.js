@@ -23,7 +23,7 @@ var ReadingListViewModel = function(books) {
         if(searchTerms === '') {
             return book.reading_type === readingType;
         } else {
-            return book.reading_type === readingType && book.title.includes(searchTerms);
+            return book.reading_type === readingType && book.title.toUpperCase().includes(searchTerms.toUpperCase());
         }
     }
 };
