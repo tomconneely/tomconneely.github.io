@@ -139,7 +139,7 @@ books.push({
     author: "Joseph Babcock",
     isbn: "9781489031747",
     year_read: 2018,
-    book_type: BOOK_TYPE.PHYSICAL,
+    book_type: BOOK_TYPE.AUDIOBOOK,
     goodreads_link: "https://www.goodreads.com/book/show/18192829-the-king-of-big-air",
     amazon_link: "",
     passages : [
@@ -159,11 +159,11 @@ books.push({
 });
 
 books.push({
-    title: "",
-    author: "",
+    title: "I Am Not Your Negro",
+    author: "James Baldwin, Raoul Peck",
     isbn: "",
     year_read: 2018,
-    book_type: BOOK_TYPE.PHYSICAL,
+    book_type: BOOK_TYPE.EBOOK,
     goodreads_link: "",
     amazon_link: "",
     passages : [
