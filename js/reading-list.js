@@ -8,18 +8,18 @@ var ReadingListViewModel = function(books) {
     self.booksCurrentlyReading = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function (book){
             //return book.reading_type === READING_TYPE.CURRENTLY_READING;
-            return filterBooks(READING_TYPE.CURRENTLY_READING, self.searchTerms());
+            return filterBooks(book, READING_TYPE.CURRENTLY_READING, self.searchTerms());
         });
     });
 
     self.booksRead = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function(book){
             //return book.reading_type === READING_TYPE.READ;
-            return filterBooks(READING_TYPE.READ, self.searchTerms());
+            return filterBooks(book, READING_TYPE.READ, self.searchTerms());
         });
     });
 
-    function filterBooks(readingType, searchTerms) {
+    function filterBooks(book, readingType, searchTerms) {
         if(searchTerms === '') {
             return book.reading_type === readingType;
         } else {
