@@ -12,14 +12,14 @@
 
     <div>
         <p>Currently Reading</p>
-        <ul data-bind="foreach: booksCurrentlyReading">
+        <ul data-bind="foreach: booksCurrentlyReading()">
             <li data-bind="text: title"></li>
         </ul>
     </div>
 
     <div>
         <p>Books Read</p>
-        <ul data-bind="foreach: booksRead">
+        <ul data-bind="foreach: booksRead()">
             <li data-bind="text: title"></li>
         </ul>
     </div>
