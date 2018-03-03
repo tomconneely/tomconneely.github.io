@@ -20,7 +20,7 @@ var ReadingListViewModel = function(books) {
     });
 
     function filterBooks(readingType, searchTerms) {
-        if(searchTerms !== '') {
+        if(searchTerms === '') {
             return book.reading_type === readingType;
         } else {
             return book.reading_type === readingType && book.title.includes(searchTerms);
