@@ -1,10 +1,8 @@
-var ReadingListViewModel = function() {
+var ReadingListViewModel = function(bookList) {
     var self = this;
 
-    this.books = ko.observableArray(["Book 1", "Book 2"]);
+    this.books = ko.observableArray(bookList);
 };
-
-ko.applyBindings(new ReadingListViewModel());
 
 var BOOK_TYPE = {
     PHYSICAL: 'physical',
@@ -194,3 +192,5 @@ books.push({
     passages : [
     ]
 });
+
+ko.applyBindings(new ReadingListViewModel(books));
