@@ -164,7 +164,7 @@ books.push({
     isbn: "",
     year_read: 2018,
     book_type: BOOK_TYPE.EBOOK,
-    goodreads_link: "",
+    goodreads_link: "https://www.goodreads.com/book/show/33198164-i-am-not-your-negro",
     amazon_link: "",
     passages : [
     ]
