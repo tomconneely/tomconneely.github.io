@@ -15,6 +15,8 @@ var ReadingListViewModel = function(books) {
             return book.reading_type === READING_TYPE.READ;
         });
     };
+
+    return self;
 };
 
 var BOOK_TYPE = {
