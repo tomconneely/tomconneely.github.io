@@ -3,18 +3,29 @@ var ReadingListViewModel = function(books) {
 
     //this.books = ko.observableArray(books);
     self.books = books;
+    self.searchTerms = ko.observable('');
 
     self.booksCurrentlyReading = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function (book){
-            return book.reading_type === READING_TYPE.CURRENTLY_READING;
+            //return book.reading_type === READING_TYPE.CURRENTLY_READING;
+            return filterBooks(READING_TYPE.CURRENTLY_READING, self.searchTerms());
         });
     });
 
     self.booksRead = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function(book){
-            return book.reading_type === READING_TYPE.READ;
+            //return book.reading_type === READING_TYPE.READ;
+            return filterBooks(READING_TYPE.READ, self.searchTerms());
         });
     });
+
+    function filterBooks(readingType, searchTerms) {
+        if(searchTerms !== '') {
+            return book.reading_type === readingType;
+        } else {
+            return book.reading_type === readingType && book.title.includes(searchTerms);
+        }
+    }
 };
 
 var BOOK_TYPE = {
