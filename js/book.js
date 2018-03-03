@@ -1,7 +1,7 @@
-'use strict';
-import {
-    getBookType
-} from 'config.js';
+// 'use strict';
+// import {
+//     getBookType
+// } from 'config.js';
 
 var AUTHOR_TYPE = {
         AUTHOR: 'author',
