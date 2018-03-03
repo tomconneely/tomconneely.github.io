@@ -169,3 +169,28 @@ books.push({
     passages : [
     ]
 });
+
+books.push({
+    title: "Kill All Normies: Online Culture Wars from 4chan and Tumblr to Trump and the Alt-Right",
+    author: "Angela Nagle",
+    isbn: "9781785355431",
+    year_read: 2018,
+    book_type: BOOK_TYPE.PHYSICAL,
+    goodreads_link: "https://www.goodreads.com/book/show/35040209-kill-all-normies",
+    amazon_link: "",
+    passages : [
+    ]
+});
+
+
+books.push({
+    title: "",
+    author: "",
+    isbn: "",
+    year_read: 2018,
+    book_type: BOOK_TYPE.EBOOK,
+    goodreads_link: "",
+    amazon_link: "",
+    passages : [
+    ]
+});
