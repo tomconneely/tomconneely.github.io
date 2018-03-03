@@ -10,11 +10,19 @@
     <h3><a href="index.html">Go Home</a></h3>
     <p>The new page containing list of books read and passages</p>
 
-    <p>
-        <ul data-bind="foreach: books">
+    <div>
+        <p>Currently Reading</p>
+        <ul data-bind="foreach: booksCurrentlyReading">
             <li data-bind="text: title"></li>
         </ul>
-    </p>
+    </div>
+
+    <div>
+        <p>Books Read</p>
+        <ul data-bind="foreach: booksRead">
+            <li data-bind="text: title"></li>
+        </ul>
+    </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script type="text/javascript" src="/js/book.js"></script>

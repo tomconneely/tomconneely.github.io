@@ -1,7 +1,20 @@
-var ReadingListViewModel = function(bookList) {
+var ReadingListViewModel = function(books) {
     var self = this;
 
-    this.books = ko.observableArray(bookList);
+    //this.books = ko.observableArray(books);
+    self.books = books;
+
+    self.booksCurrentlyReading = function(){
+        return ko.utils.arrayFilter(self.books, function (book){
+            return book.reading_type === READING_TYPE.CURRENTLY_READING;
+        });
+    };
+
+    self.booksRead = function(){
+        return ko.utils.arrayFilter(self.books, function(book){
+            return book.reading_type === READING_TYPE.READ;
+        });
+    };
 };
 
 var BOOK_TYPE = {
@@ -10,6 +23,12 @@ var BOOK_TYPE = {
     AUDIOBOOK: 'audiobook'
 };
 
+var READING_TYPE = {
+    READ: 'read',
+    CURRENTLY_READING: 'currentlyReading',
+    WANT_TO_READ: 'wantToRead'
+}
+
 var books = [];
 books.push({
     title: "Dreamland: The True Tale of America's Opiate Epidemic",
@@ -17,6 +36,7 @@ books.push({
     isbn: "978-1-62040-252-8",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/22529381-dreamland",
     amazon_link: "https://www.amazon.com/Dreamland-True-Americas-Opiate-Epidemic-ebook/dp/B00U19DTS0/ref=sr_1_1?ie=UTF8&qid=1516904432&sr=8-1&keywords=sam+quinones",
     passages: [
@@ -34,6 +54,7 @@ books.push({
     isbn: "978-0-55344-812-2",
     year_read: 2018,
     book_type: BOOK_TYPE.AUDIOBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/34928122-artemis",
     amazon_link: "https://www.amazon.com/Artemis-Novel-Andy-Weir/dp/0553448129/",
     passages: [
@@ -50,6 +71,7 @@ books.push({
     isbn: "978-0-06247-008-9",
     year_read: 2018,
     book_type: BOOK_TYPE.AUDIOBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/28820060-killing-peyton",
     amazon_link: "https://www.amazon.com/Fantasy-Man-Players-Brutality-Football-ebook/dp/B019WVTM6K/ref=sr_1_2?ie=UTF8&qid=1516904349&sr=8-2&keywords=nate+jackson",
     passages: [
@@ -66,6 +88,7 @@ books.push({
     isbn: "978-1-84488-241-0",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/17690336-sorted"
 });
 
@@ -75,6 +98,7 @@ books.push({
     isbn: "978-0-76537-586-5",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/21418013-lock-in",
     amazon_link: "https://www.amazon.com/Lock-Novel-Future-John-Scalzi/dp/076538132X/"
 });
@@ -85,6 +109,7 @@ books.push({
     isbn: "978-1-7864910-2-2",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "",
     amazon_link: "",
     passages : [
@@ -102,6 +127,7 @@ books.push({
     isbn: "9780062796752",
     year_read: 2018,
     book_type: BOOK_TYPE.AUDIOBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/35068859-trumpocracy",
     amazon_link: "https://www.amazon.com/Trumpocracy-Corruption-American-David-Frum/dp/0062796739",
     passages : [
@@ -114,6 +140,7 @@ books.push({
     isbn: "9781444799040",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/24783767-10-happier",
     amazon_link: "https://www.amazon.com/10-Happier-Self-Help-Actually-Works/dp/0062265431/",
     passages : [
@@ -126,6 +153,7 @@ books.push({
     isbn: "9781787330283",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/34311003-world-without-mind",
     amazon_link: "https://www.amazon.com/gp/product/1787330281/",
     passages : [
@@ -138,6 +166,7 @@ books.push({
     isbn: "9781489031747",
     year_read: 2018,
     book_type: BOOK_TYPE.AUDIOBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/18192829-the-king-of-big-air",
     amazon_link: "",
     passages : [
@@ -150,6 +179,7 @@ books.push({
     isbn: "",
     year_read: 2018,
     book_type: BOOK_TYPE.EBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/33858733-mlk-on-the-other-america-and-black-power",
     amazon_link: "",
     passages : [
@@ -162,6 +192,7 @@ books.push({
     isbn: "",
     year_read: 2018,
     book_type: BOOK_TYPE.EBOOK,
+    reading_type: READING_TYPE.READ,
     goodreads_link: "https://www.goodreads.com/book/show/33198164-i-am-not-your-negro",
     amazon_link: "",
     passages : [
@@ -174,6 +205,7 @@ books.push({
     isbn: "9781785355431",
     year_read: 2018,
     book_type: BOOK_TYPE.PHYSICAL,
+    reading_type: READING_TYPE.CURRENTLY_READING,
     goodreads_link: "https://www.goodreads.com/book/show/35040209-kill-all-normies",
     amazon_link: "",
     passages : [
