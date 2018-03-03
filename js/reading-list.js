@@ -4,19 +4,17 @@ var ReadingListViewModel = function(books) {
     //this.books = ko.observableArray(books);
     self.books = books;
 
-    self.booksCurrentlyReading = function(){
+    self.booksCurrentlyReading = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function (book){
             return book.reading_type === READING_TYPE.CURRENTLY_READING;
         });
-    };
+    });
 
-    self.booksRead = function(){
+    self.booksRead = ko.computed(function(){
         return ko.utils.arrayFilter(self.books, function(book){
             return book.reading_type === READING_TYPE.READ;
         });
-    };
-
-    return self;
+    });
 };
 
 var BOOK_TYPE = {
