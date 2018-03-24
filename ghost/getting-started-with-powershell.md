@@ -16,9 +16,14 @@ Naturally the potential for making my job easier in the long run was very appeal
 
 I'm writing this to add some personal documentation so that I can cut down on the time spent relearning the language and hopefully write better scripts in the future.
 
+## Notes
+
+I'm using Windows 10 and PowerShell 5. I'll go through getting the version of PowerShell on the machine further down. Most of the stuff in this series will work in older versions but Microsoft is updating and improving PowerShell all the time, including getting it to work on Mac/Linux so keep an eye out for updates. (Blog/Twitter???)
+
 ## Setting up the environment
 
-Setting up the window
+- Setting up the window
+
 
 Using $PSVersionTable
 
