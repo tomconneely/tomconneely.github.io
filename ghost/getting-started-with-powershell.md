@@ -22,9 +22,50 @@ I'm using Windows 10 and PowerShell 5. I'll go through getting the version of Po
 
 ## Setting up the environment
 
-- Setting up the window
+### Setting up the console app
 
+I don't norrmally use the PowerShell console app but it can be a good idea to get a feel for it. There are some versions of Windows that don't have the GUI available so you'll only have access to the console app. I normally use the PowerShell Integrated Scripting Environment (ISE), Visual Studio or VS Code.
 
-Using $PSVersionTable
+Using Windows 10, you can find PowerShell console app in the Start menu. There are a couple of ways to do this
+
+1. Search
+    - Open the Start menu and type PowerShell
+    - Choose "Windows PowerShell" from the list presented
+2. Direct
+   - Open the Start Menu
+   - Go to All Programs > Accessories
+   - Click on Windows PowerShell
+
+<div class="notes-div">
+<h4>Note</h4>
+
+<p>Make sure you're using the correct version. I'm using a 64-bit version of Windows so the icon with "x86" in the title is the 32-bit version. It's a good idea to pin the 64-bit concole app and the ISE to the Start menu at least. I've also pinned them to the Task bar for easier access.</p>
+</div>
+
+If you click in the upper left corner and select "Properties" then you will be given a window that will allow you to change the the appearance of the console app to fit your preferences.
+
+<!-- Insert picture -->
+
+It's a good idea to adjust the font size to something comfortable. On the "Layout" tab, set both Widths to the same value. If you don't you may get a horizontal scrollbar at the bottom of the screen which can be a problem when writing longer commands. 
+
+#### Setting up the Integrated Scripting Environment (ISE)
+
+You can find the ISE in the same place as the console app. You can also start the ISE from the console app. A few ways to start the ISE are
+
+1. Search
+    - Open the Start menu and type PowerShell
+    - Choose "Windows PowerShell ISE" from the list presented
+2. Direct
+   - Open the Start Menu
+   - Go to All Programs > Accessories
+   - Click on Windows PowerShell ISE
+3. Console App
+   - Enter "ise" and press Enter
+
+<!-- Insert picture -->
+
+#### Getting the Installed PowerShell Version
+
+In the console app or ISE you can use the command
 
 Conclusion
